@@ -3,19 +3,21 @@
 <script>
 function getQV()
 {
-       query = []
-       query = window.location.href.split('/')[4].split('?')
-       return query[0]
+       query = window.location.href.split('/')[4].split('?')[0]
+       return query
 }
 function getSrc() {
-       return 'https://stivengiv.github.io/mp3/' + getQV() + '.mp3'
+       return 'https://lab.aritz331.tk/f/' + getQV() + read(getQV())
 }
-function read() {
-
+function read(qv) {
+       $.getJSON('/dl/links.json', function(data) {
+              d = data[qv]
+       })
+       return d
 }
        
 window.onload = function() {
-       window.location.replace(read())
+       window.location.replace(getSrc())
 }
 </script>
 <style>

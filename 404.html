@@ -17,7 +17,11 @@ function read(qv) {
 }
        
 window.onload = function() {
-       window.location.replace(getSrc())
+       if (typeof getSrc() !== 'undefined') {
+              window.location.replace(getSrc())
+       } else {
+              window.close()
+       }
 }
 </script>
 <style>

@@ -9,11 +9,9 @@ function getQV()
 function getSrc() {
        return 'https://lab.aritz331.tk/f/' + getQV() + '.' + read(getQV())
 }
-function read(qv) {
-       $.getJSON('/dl/links.json', function(data) {
-              d = data[qv]
-       })
-       await return d
+async function read(qv) {
+  data = await $.getJSON('/dl/links.json')
+  return data[qv]
 }
        
 window.onload = function() {

@@ -14,8 +14,7 @@ function read(qv) {
        .then(response => {
               return response.json();
        })
-       .then(data => dt = data))
-       return dt[qv]
+       .then(data => return dt[qv])
 }
        
 window.onload = function() {

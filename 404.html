@@ -10,20 +10,23 @@ function getSrc() {
        return 'https://lab.aritz331.tk/f/' + getQV() + '.' + res
 }
 function read(qv) {
-  import [qv[0]] as data from "/dl/links.json"
-  let res = data
+  return new Promise(function (resolve, reject) {
+    $.getJSON('/dl/links.json', function(data) {
+      resolve(data[qv])
+    })
+  })
 }
        
 window.onload = function() {
-       /*(async function() {
+       (async function() {
               res = await read(getQV())
-       })()*/
-       if (typeof res == 'string') {
-              window.location.replace(getSrc())
-              console.log(getSrc())
-       } else {
-              console.log(res, typeof res)
-       }
+              if (typeof res == 'string') {
+                     window.location.replace(getSrc())
+                     console.log(getSrc())
+              } else {
+                     console.log(res, typeof res)
+              }
+       })()
 }
 </script>
 <style>

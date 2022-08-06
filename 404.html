@@ -7,7 +7,9 @@ function getQV()
        return query
 }
 function getSrc() {
-       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + read(getQV())
+       read(getQV()).then(function(data) {
+       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + data
+       })
 }
 function read(qv) {
   return new Promise(function (resolve, reject) {
@@ -18,13 +20,13 @@ function read(qv) {
 }
        
 window.onload = function() {
-       read(getQV())
-       if (typeof getSrc() !== 'undefined') {
-              window.location.replace(getSrc())
-              console.log(getSrc())
+       read(getQV()).then(function(data) {
+              if (typeof data !== 'undefined') {
+                     window.location.replace(getSrc())
+                     console.log(getSrc())
        } else {
               window.close()
-       }
+       })
 }
 </script>
 <style>

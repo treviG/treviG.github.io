@@ -11,8 +11,9 @@ function getSrc() {
 }
 function read(qv) {
        $.getJSON('/dl/links.json', function(data) {
-              return data[qv]
+              d = data[qv]
        })
+       return d
 }
        
 window.onload = function() {

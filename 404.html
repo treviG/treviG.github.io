@@ -10,15 +10,14 @@ function getSrc() {
        return 'https://lab.aritz331.tk/f/' + getQV() + '.' + res
 }
 function read(qv) {
-  import [qv] as data from "/dl/links.json"
+  import [qv[0]] as data from "/dl/links.json"
+  let res = data
 }
        
 window.onload = function() {
-       (async function() {
+       /*(async function() {
               res = await read(getQV())
-       })()
-       r = 
-       if (typeof res == 'undefined')
+       })()*/
        if (typeof res == 'string') {
               window.location.replace(getSrc())
               console.log(getSrc())

@@ -21,7 +21,7 @@ window.onload = function() {
        (async function() {
               res = await read(getQV())
        })()
-       if (typeof data !== 'undefined') {
+       if (typeof res !== 'undefined') {
               window.location.replace(getSrc())
               console.log(getSrc())
        } else {

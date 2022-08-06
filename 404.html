@@ -7,7 +7,7 @@ function getQV()
        return query
 }
 function getSrc() {
-       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + read(getQV())
+       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + await read(getQV())
 }
 async function read(qv) {
   data = await $.getJSON('/dl/links.json')

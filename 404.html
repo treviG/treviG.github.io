@@ -10,7 +10,7 @@ function getSrc() {
        return 'https://lab.aritz331.tk/f/' + getQV() + '.' + read(getQV())
 }
 function read(qv) {
-       $.getJSON('links.json', function(data) {
+       $.getJSON('../links.json', function(data) {
               return data[qv]
        })
 }

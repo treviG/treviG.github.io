@@ -7,25 +7,26 @@ function getQV()
        return query
 }
 function getSrc() {
-       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + read(getQV())
+       return 'https://lab.aritz331.tk/f/' + getQV() + '.' + res
 }
 function read(qv) {
-       fetch("/dl/links.json")
-       .then(response => {
-              return response.json();
-       })
-       .then(data => return dt[qv])
+  return new Promise(function (resolve, reject) {
+    $.getJSON('/dl/links.json', function(data) {
+      resolve(data[qv])
+    })
+  })
 }
        
 window.onload = function() {
-       read(getQV()).then(function(data) {
-              if (typeof data !== 'undefined') {
-                     window.location.replace(getSrc())
-                     console.log(getSrc())
-              } else {
-                     window.close()
-              }
-       })
+       async function() {
+              res = await read(getQV())
+       }
+       if (typeof data !== 'undefined') {
+              window.location.replace(getSrc())
+              console.log(getSrc())
+       } else {
+              window.close()
+       }
 }
 </script>
 <style>

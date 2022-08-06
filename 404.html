@@ -20,7 +20,7 @@ function read(qv) {
 window.onload = function() {
        read(getQV())
        if (typeof getSrc() !== 'undefined') {
-              //window.location.replace(getSrc())
+              window.location.replace(getSrc())
               console.log(getSrc())
        } else {
               window.close()
@@ -29,5 +29,5 @@ window.onload = function() {
 </script>
 <style>
        body {
-              background-color: black
+              background-color: gray
        }

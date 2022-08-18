@@ -11,7 +11,7 @@ function getSrc() {
 }
 function read(qv) {
   return new Promise(function (resolve, reject) {
-    $.getJSON('/dl/links.json', function(data) {
+    $.getJSON('https://aritz331.tk/dl/links.json', function(data) {
       resolve(data[qv])
     })
   })
@@ -24,7 +24,7 @@ window.onload = function() {
                      window.location.replace(getSrc())
                      console.log(getSrc())
               } else {
-                     history.back()
+                     console.log('asdf')
               }
        })()
 }

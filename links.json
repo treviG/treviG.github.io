@@ -5,5 +5,10 @@
   "hub": {
     "vegas19": "crack/vegas19.exe",
     "vegas20": "crack/vegas20.exe"
+  },
+  "lh": {
+    "vanced": "lab",
+    "vegas19": "hub",
+    "vegas20": "hub"
   }
 }

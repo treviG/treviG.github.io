@@ -14,7 +14,7 @@ function read(lh, qv) {
   return fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      return data.lh[qv];
+      return data[lh][qv];
     })
     .catch((err) => {
       console.log(err);

@@ -26,9 +26,9 @@ function read(lh, qv) {
     });
 }
 
-function sleep(sec) {
+function sleep(sec, func) {
        setTimeout(function(){
-              
+              func()
        }, sec*1000);
 }
        
@@ -38,9 +38,7 @@ window.onload = function() {
               res = await read(res1, getQV())
               if (typeof res == 'string') {
                      window.location.href = getSrc(res1)
-                     sleep(0.5)
-                     history.back()
-                     
+                     sleep(0.5, history.back())                     
               } else {
                      console.log('asdf')
               }

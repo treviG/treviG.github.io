@@ -6,8 +6,13 @@ function getQV()
        query = window.location.href.split('/')[4]
        return query
 }
-function getSrc() {
-       return 'https://gitlab.com/aritz331/bigstuf/-/raw/main/f/' + res
+function getSrc(lh) {
+       if lh == "hub" {
+              return 'https://github.com/aritz331/' + res + '?raw=true'
+       } else if lh == "lab" {
+              return 'https://gitlab.com/aritz331/bigstuf/-/raw/main/f/' + res
+       }
+       return
 }
 function read(lh, qv) {
   const url = "/dl/links.json";
@@ -26,7 +31,7 @@ window.onload = function() {
               res1 = await read("lh", getQV())
               res = await read(res1, getQV())
               if (typeof res == 'string') {
-                     window.location.replace(getSrc())
+                     window.location.replace(getSrc(res1))
                      console.log(getSrc())
               } else {
                      console.log('asdf')

@@ -24,7 +24,7 @@ function read(lh, qv) {
 window.onload = function() {
        (async function() {
               res1 = await read("lh", getQV())
-              res = await read(res1, getQV()])
+              res = await read(res1, getQV())
               if (typeof res == 'string') {
                      window.location.replace(getSrc())
                      console.log(getSrc())

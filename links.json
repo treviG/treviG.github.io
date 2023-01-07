@@ -1,5 +1,8 @@
 {
-  "vanced": "vanced.apk",
-  "vegas19": "crack/vegas19.exe",
-  "vegas20": "crack/vegas20.exe"
+  "lab": [
+    "vanced": "vanced.apk"
+  ],
+  "hub": [
+    "vegas19": "crack/vegas19.exe",
+    "vegas20": "crack/vegas20.exe"
 }

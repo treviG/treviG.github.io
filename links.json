@@ -4,11 +4,13 @@
   },
   "hub": {
     "vegas19": "crack/blob/main/vegas/19/out/vegas19crack--aritz331_.exe",
-    "vegas20": "crack/blob/main/vegas/20/out/vegas20crack--aritz331_.exe"
+    "vegas20": "crack/blob/main/vegas/20/out/vegas20crack--aritz331_.exe",
+    "sib": "crack/blob/main/startisback/sib.exe"
   },
   "lh": {
     "vanced": "lab",
     "vegas19": "hub",
-    "vegas20": "hub"
+    "vegas20": "hub",
+    "sib": "hub"
   }
 }

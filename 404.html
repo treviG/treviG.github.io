@@ -15,7 +15,7 @@ function getSrc(lh) {
        return
 }
 function read(lh, qv) {
-  const url = "/dl/links.json";
+  const url = "links.json";
   return fetch(url)
     .then((response) => response.json())
     .then((data) => {
